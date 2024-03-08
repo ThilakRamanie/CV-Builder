@@ -13,7 +13,7 @@ A web app to create a well formatted resume in minutes. you can also download yo
  
 ## Live Demo Link
 
-   Check it out live :point_right: [Resume Ready](https://)
+   Check it out live :point_right: [Resume Ready](https://cv-builder-react.netlify.app/)
 
 ## 🛠 Installation & Set Up
 To get a working local copy up and running follow these simple steps
