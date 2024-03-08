@@ -22,7 +22,7 @@ const ResumeTemplate = (props) => {
 
   return (
     <>
-      <Stack spacing={4} ref={ref} m={6} fontFamily="sans-serif">
+      <Stack spacing={4} ref={ref} m={6} fontFamily="sans-serif" className="display-details-template">
         <Stack spacing={1}>
           <Center>
             <Heading as="h1">
@@ -78,7 +78,7 @@ const ResumeTemplate = (props) => {
             </HStack>
           </Center>
           <HStack justify="center">
-            <address>
+            <address className="address">
               <PhoneIcon /> {resumeInfo.profile.phone} &nbsp;
               {resumeInfo.profile.address}
             </address>
@@ -173,24 +173,25 @@ const ResumeTemplate = (props) => {
       </Stack>
       <HStack divider={<StackDivider />} pt="24px">
         <Button
-          w="max-content"
-          colorScheme="blue"
+          className="new-cv"
+          variant="solid"
           isDisabled={page !== 3}
           onClick={() => {
             window.location.reload();
           }}
         >
-          Create New
+          New CV
         </Button>
         <div>
           <ReactToPrint
             trigger={() => (
               <Button
-                colorScheme="whatsapp"
+              className="save-cv"
+              variant="outline"
                 w="max-content"
                 isDisabled={page !== 3}
               >
-                Print this out!
+                Save CV
               </Button>
             )}
             content={() => ref.current}

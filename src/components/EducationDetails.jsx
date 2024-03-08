@@ -225,30 +225,33 @@ const EduacationDetails = (props) => {
       </SimpleGrid>
       {educationSection}
       {certificateSection}
-      <Button
-        colorScheme="whatsapp"
-        onClick={() => {
-          createEducationSection();
-        }}
-        w="max-content"
-        rightIcon={<AddIcon />}
-      >
-        Add Education
-      </Button>
-      <Button
-        colorScheme="whatsapp"
-        onClick={() => {
-          saveEducationData();
-          createCertificateSection();
-        }}
-        w="max-content"
-        rightIcon={<AddIcon />}
-      >
-        Add Certificates
-      </Button>
-      <HStack spacing={8} justify="center">
+      <HStack spacing={4} justify="space-between">
         <Button
-          colorScheme="blue"
+          className="block-btn"
+          onClick={() => {
+            createEducationSection();
+          }}
+          w="max-content"
+          rightIcon={<AddIcon />}
+        >
+          Add Education
+        </Button>
+        <Button
+          className="block-btn"
+          onClick={() => {
+            saveEducationData();
+            createCertificateSection();
+          }}
+          w="max-content"
+          rightIcon={<AddIcon />}
+        >
+          Add Certificates
+        </Button>
+      </HStack>
+      <HStack spacing={4} justify="end">
+        <Button
+          colorScheme="teal"
+          variant="solid"
           onClick={() => {
             setPage((p) => p - 1);
           }}
@@ -258,7 +261,8 @@ const EduacationDetails = (props) => {
           back{" "}
         </Button>
         <Button
-          colorScheme="whatsapp"
+          colorScheme="teal"
+          variant="outline"
           onClick={() => {
             saveEducationData();
             saveCertificateData();
@@ -266,7 +270,7 @@ const EduacationDetails = (props) => {
           }}
           rightIcon={<ChevronRightIcon />}
         >
-          Save & Submit
+          Next
         </Button>
       </HStack>
     </Stack>

@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +9,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -18,11 +18,12 @@ code {
 }
 
 .profile-card {
-  background-color: #D0E7D2;
+  background-color: #d0e7d2;
   color: #618264 !important;
 }
 
-input {
+input,
+textarea {
   border-color: #618264 !important;
 }
 
@@ -31,13 +32,80 @@ input:hover {
 }
 
 h3 {
-  color: #D0E7D2 !important;
+  color: #d0e7d2 !important;
 }
 
 svg {
-  color: #D0E7D2 !important;
+  color: #d0e7d2 !important;
 }
 
 li {
-  color: #D0E7D2 !important;
+  color: #d0e7d2 !important;
+}
+
+.address,
+.display-details-template h1,
+.display-details-template a,
+.display-details-template h2,
+.display-details-template h3,
+.display-details-template h4,
+.display-details-template h5,
+.display-details-template h6,
+.display-details-template p,
+.display-details-template i,
+.display-details-template em,
+.display-details-template b,
+.display-details-template li,
+.display-details-template svg {
+  color: #000 !important;
+}
+
+.display-details-template h3 {
+  border-bottom-color: #000 !important;
+}
+
+.display-details a {
+  color: white !important;
+}
+
+.btn-icon {
+  color: black !important;
+}
+
+.new-cv {
+  background-color: #d0e7d2;
+  color: #618264;
+}
+
+.save-cv {
+  background-color: #d0e7d2;
+  color: #618264;
+}
+
+.save-cv:hover {
+  color: #d0e7d2;
+}
+
+.block-btn {
+  background-color: #618264 !important;
+  color: #d0e7d2 !important;
+}
+
+.block-btn:hover svg {
+  color: #618264 !important;
+}
+
+.block-btn:hover {
+  background-color: #d0e7d2 !important;
+  color: #618264 !important;
+}
+
+.heading {
+  color: #618264 !important;
+}
+
+.resume-template {
+  background-color: #d0e7d2;
+  border-radius: 5px;
+  box-shadow: 15px 20px #618264 !important;
 }

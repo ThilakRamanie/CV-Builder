@@ -1,12 +1,6 @@
-import {
-  AddIcon,
-  ChevronRightIcon,
-  EmailIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
+import { AddIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Button,
-  Center,
   FormControl,
   FormLabel,
   Input,
@@ -67,7 +61,7 @@ const BasicDetails = (props) => {
             <Input
               type="tel"
               placeholder="phone number"
-              maxLength={10}
+              maxLength={15}
               pattern="[0-9]{10}"
               value={resumeInfo.profile.phone}
               onChange={(e) => {
@@ -189,16 +183,27 @@ const BasicDetails = (props) => {
         >
           Save
         </Button> */}
-      <Stack direction="row" spacing={4} justify='end'>
-        <Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
-          Email
+      <Stack direction="row" spacing={4} justify="end">
+        <Button
+          leftIcon={<AddIcon />}
+          colorScheme="teal"
+          variant="solid"
+          onClick={() => {
+            setAddressSection(!addressSection);
+          }}
+          isDisabled={addressSection}
+        >
+          Add Address
         </Button>
         <Button
-          rightIcon={<ArrowForwardIcon />}
+          rightIcon={<ChevronRightIcon className="btn-icon" />}
           colorScheme="teal"
           variant="outline"
+          onClick={() => {
+            setPage((p) => p + 1);
+          }}
         >
-          Call us
+          Next
         </Button>
       </Stack>
     </Stack>

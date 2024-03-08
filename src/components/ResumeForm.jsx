@@ -92,7 +92,7 @@ const ResumeForm = () => {
         </Heading>
         <Box w="60%" borderRadius="lg">
           <Progress
-            colorScheme="whatsapp"
+            colorScheme="teal"
             value={page === 0 ? 33.3 : page === 1 ? 66.6 : 100}
           />
         </Box>
@@ -114,12 +114,12 @@ const ResumeForm = () => {
               rounded="md"
             >
               <Center>
-                <Heading mb={4}>{formPage[page]}</Heading>
+                <Heading className="heading" mb={4}>{formPage[page]}</Heading>
               </Center>
               {renderForm()}
             </Box>
           </VStack>
-          <VStack style={{ display: page === 3 ? "block" : "none" }}>
+          <VStack className="resume-template" style={{ display: page === 3 ? "block" : "none" }}>
             <ResumeTemplate resumeInfo={resumeInfo} page={page} />
           </VStack>
         </HStack>
@@ -140,12 +140,12 @@ const ResumeForm = () => {
               rounded="md"
             >
               <Center>
-                <Heading mb={4}>{formPage[page]}</Heading>
+                <Heading className="heading" mb={4}>{formPage[page]}</Heading>
               </Center>
               {renderForm()}
             </Box>
           </VStack>
-          <VStack style={{ width: page === 3 ? "80%" : "50%" }}>
+          <VStack className="resume-template" style={{ width: page === 3 ? "80%" : "50%" }}>
             <ResumeTemplate resumeInfo={resumeInfo} page={page} />
           </VStack>
         </HStack>

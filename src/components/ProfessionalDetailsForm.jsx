@@ -5,7 +5,6 @@ import {
   FormHelperText,
   FormLabel,
   GridItem,
-  HStack,
   Input,
   SimpleGrid,
   Stack,
@@ -107,7 +106,7 @@ const ProfessionalDetails = (props) => {
         </FormControl>
         <GridItem colSpan={[1, 1, 1, 2]}>
           <FormControl>
-            <FormLabel>JOb Details:</FormLabel>
+            <FormLabel>Job Details:</FormLabel>
             <Textarea
               placeholder="Describe your role and achievements"
               onChange={(e) => {
@@ -165,34 +164,36 @@ const ProfessionalDetails = (props) => {
       </FormControl>
       {workSection}
       <Button
-        colorScheme="messenger"
+        className="block-btn"
         onClick={createWorkSection}
         w="max-content"
         rightIcon={<AddIcon />}
       >
         Add Work Experience
       </Button>
-      <HStack spacing={8} justify="center">
+      <Stack direction="row" spacing={4} justify="end">
         <Button
-          colorScheme="blue"
+          leftIcon={<ChevronLeftIcon />}
+          colorScheme="teal"
+          variant="solid"
           onClick={() => {
             setPage((p) => p - 1);
           }}
-          leftIcon={<ChevronLeftIcon />}
         >
-          back
+          Back
         </Button>
         <Button
-          colorScheme="whatsapp"
+          rightIcon={<ChevronRightIcon className="btn-icon" />}
+          colorScheme="teal"
+          variant="outline"
           onClick={() => {
             saveData();
             setPage((p) => p + 1);
           }}
-          rightIcon={<ChevronRightIcon />}
         >
-          Save
+          Next
         </Button>
-      </HStack>
+      </Stack>
     </Stack>
   );
 };
